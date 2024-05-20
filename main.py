@@ -31,7 +31,7 @@ auth_users = [6756781098]
 
 @bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text(f"<b>✨ Hᴇʟʟᴏ  [{m.from_user.first_name}](tg://user?id={m.from_user.id})\n\nI Cᴀɴ Pʀᴏᴠɪᴅᴇ ᴛxᴛ ꜰɪʟᴇ ᴏᴛ ꜰɪʟᴇ Fᴏʀ Yᴏᴜ Jᴜsᴛ Aᴅᴅ Mᴇ Iɴ Yᴏᴜʀ Gʀᴏᴜᴘ Oʀ Jᴏɪɴ Oᴜʀ Gʀᴏᴜᴘ\n\nPress /OM</b>")
+    editable = await m.reply_text(f"<b>✨ Hᴇʟʟᴏ  [{m.from_user.first_name}](tg://user?id={m.from_user.id})\n\nI Cᴀɴ Pʀᴏᴠɪᴅᴇ ᴛxᴛ ꜰɪʟᴇ)
 
 
 @bot.on_message(filters.command("stop"))
@@ -41,7 +41,7 @@ async def restart_handler(_, m):
 
 
 
-@bot.on_message(filters.command(["OM"])&(filters.chat(auth_users)))
+@bot.on_message(filters.command(["up_vid"])&(filters.chat(auth_users)))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text('Send TXT file')
     input: Message = await bot.listen(editable.chat.id)
@@ -164,8 +164,8 @@ async def account_login(bot: Client, m: Message):
 
             try:  
                 
-                cc = f'**Vid_id  »** {str(count).zfill(3)}\n**Title  »** {name1} {res} {MR}.mkv\n**Batch »** {raw_text0}\n\n'
-                cc1 = f'**Vid_id  »** {str(count).zfill(3)}\n**Title »** {name1} {MR}.pdf \n**Batch »** {raw_text0}\n\n'
+                 cc = f'[🎬] Vid_ID :** {str(count).zfill(3)}\n**Title :** {name1} {res}.mkv\n**Batch Name :** {b_name}\n\n**Downloaded by : {MR}**\n\n'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  #Bot Created by @NtrRazYt
+                cc1 = f'[📕] Pdf_ID :** {str(count).zfill(3)}\n**Title :** {name1}.pdf \n**Batch Name :** {b_name}\n\n**Downloaded by : {MR}**\n
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
